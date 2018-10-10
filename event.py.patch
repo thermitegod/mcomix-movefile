@@ -1,0 +1,13 @@
+--- mcomix-1.2.1-master/mcomix/event.py	2018-06-26 20:40:01.030742729 -0700
++++ mcomix-1.2.1/mcomix/event.py	2018-10-09 18:44:14.888362713 -0700
+@@ -278,6 +278,10 @@
+             ['<Control><Shift>s'],
+             self._window.extract_page)
+ 
++        manager.register('move_file',
++            ['Insert', 'grave'],
++            self._window.move_file)
++
+         manager.register('refresh_archive',
+             ['<control><shift>R'],
+             self._window.filehandler.refresh_file)
